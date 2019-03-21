@@ -1,8 +1,10 @@
 <?
-/**
- * User: Pavel Olnyov
- * Email: olnyov@gmail.com
- * Date: 22.03.2019
- * Time: 0:16
- */
-echo "yes";
+
+// Подключаем файл с классом для работы с GET параметрами
+require_once "RequestHandler.php";
+
+// Создаем экземпляр класса
+$obRequestHandler = new RequestHandler();
+
+// Выводим JSON представление на экран
+echo $obRequestHandler->showJSONParams();
