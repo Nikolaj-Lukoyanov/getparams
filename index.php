@@ -7,4 +7,4 @@ require_once "RequestHandler.php";
 $obRequestHandler = new RequestHandler();
 
 // Выводим JSON представление на экран
-echo $obRequestHandler->showJSONParams();
+echo $obRequestHandler->validate()->showJSONParams();

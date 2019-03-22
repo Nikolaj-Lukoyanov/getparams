@@ -27,4 +27,16 @@ class RequestHandler
         return json_encode($this->arGet);
     }
 
+    /**
+     * Валидация значений GET-параметров
+     * @return $this
+     */
+    public function validate(){
+        foreach ($this->arGet as $key => &$param){
+            $param = filter_input(INPUT_GET, $key, FILTER_SANITIZE_SPECIAL_CHARS);
+        }
+
+        return $this;
+    }
+
 }
